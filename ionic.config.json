@@ -1,0 +1,7 @@
+{
+  "name": "stocktaking-client",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
