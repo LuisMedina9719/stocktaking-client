@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"> </ion-back-button>
+    </ion-buttons>
+    <ion-title>cart</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="full">
+    <ion-item *ngFor="let product of products">
+      <p></p>
+      <ion-label class="ion-text-wrap">{{ product.name }}</ion-label>
+      <ion-label >{{ product.quantity }}</ion-label>
+      <ion-label>{{product.price}}</ion-label>
+      <ion-button (click)="subtract(product)" slot="end">
+        <ion-icon slot="icon-only" name="trash"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <div
+    style="
+      background-color: rgb(126, 227, 247);
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+    "
+  >
+    <h6>total:</h6>
+    <p style="padding-left: 20px;">${{ total.total }}</p>
+    <h6>cantidad total:</h6>
+    <p style="padding-left: 20px;">{{ total.quantity }}</p>
+  </div>
+</ion-content>

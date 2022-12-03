@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"> </ion-back-button>
+    </ion-buttons>
+    <ion-title>register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form style="margin-top: 25px">
+    <ion-item lines="full">
+      <ion-label position="floating">Full name</ion-label>
+      <ion-input type="text" [(ngModel)]="user.name" name="txName"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input
+        type="email"
+        [(ngModel)]="user.email"
+        name="txEmail"
+      ></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input
+        type="password"
+        [(ngModel)]="user.password"
+        name="txPassword"
+      ></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Repit password</ion-label>
+      <ion-input
+        type="password"
+        [(ngModel)]="user.password_confirmation"
+        name="txPassword_confirmation"
+      ></ion-input>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+        <ion-button
+          (click)="register()"
+          color="danger"
+          expand="block"
+          shape="round"
+          type="submit"
+          [disabled]="user.password !== user.password_confirmation"
+        >
+          Registrarse
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button
+          routerLink="/login"
+          color="success"
+          expand="block"
+          shape="round"
+          
+          
+        >
+          Ingresar
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/products"> </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h5 style="color: grey">{{ product.name }}</h5>
+  <h2 style="text-align: center; height: 150px">Imagen</h2>
+  <p style="padding-left: 10px">${{product.price}}</p>
+  <div style="background-color: rgb(199, 195, 195)">
+    <h6 style="padding-left: 10px">Descripcion</h6>
+    <div style="padding-left: 15px; padding-right: 15px; text-align: justify">
+      <p>{{ product.description }}</p>
+    </div>
+  </div>
+  <ion-button (click)="agregar()" expand="block" fill="solid" shape="round" color="success">
+    Agregar al carro
+  </ion-button>
+
+</ion-content>

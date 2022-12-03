@@ -8,14 +8,23 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">{{ folder }}</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong class="capitalize">{{ folder }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-grid >
+    <ion-row>
+      <ion-col size="6">
+        <ion-card class="categoryCard">
+          <img src="https://media.4rgos.it/s/Argos/8261449_R_SET?w=270&h=270&qlt=75&fmt.jpeg.interlaced=true" alt="">
+          <ion-card-content class="categoryCardContent">
+            <ion-card-subtitle>Beds</ion-card-subtitle>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card class="categoryCard">
+          <ion-card-content class="categoryCardContent">
+            <ion-card-subtitle>producto 1</ion-card-subtitle>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

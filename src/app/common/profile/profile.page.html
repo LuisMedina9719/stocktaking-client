@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="card">
+    <img src="https://freesvg.org/img/abstract-user-flat-4.png" alt="Avatar" style="width: 100%; height: auto;" />
+    <div class="container">
+      <h4><b>{{user.name}}</b></h4>
+      <p>{{user.email}}</p>
+
+    </div>
+  </div>
+  <ion-button (click)="logOut()" expand="block" fill="solid" shape="round" color="danger">
+    Cerrar sesion
+  </ion-button>
+</ion-content>

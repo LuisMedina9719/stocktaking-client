@@ -1,0 +1,40 @@
+<ion-content>
+  <div style="height: auto">
+    <ion-card style="margin-top: 55%">
+      <ion-card-header>
+        <ion-card-title>StockTaking</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <form>
+          <ion-input
+            type="text"
+            placeholder="Email"
+            [(ngModel)]="user.email"
+            name="txEmail"
+            required
+          ></ion-input>
+          <ion-input
+            type="password"
+            placeholder="Password"
+            [(ngModel)]="user.password"
+            name="txPassword"
+            required
+          ></ion-input>
+          <ion-button
+            (click)="logIn()"
+            type="submit"
+            expand="block"
+            slot="end"
+            shape="round"
+          >
+            Log In
+          </ion-button>
+          <ion-button routerLink="/register" expand="block" fill="solid" shape="round" color="danger">
+            registrarme
+          </ion-button>
+        </form>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

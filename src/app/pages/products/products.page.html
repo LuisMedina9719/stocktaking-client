@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"> </ion-back-button>
+    </ion-buttons>
+    <ion-title>products</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <ion-toolbar>
+    <ion-searchbar placeholder="Buscar producto" inputmode="decimal" type="decimal" (ionChange)="searchProduct($event)"  [debounce]="250" showCancelButton="always"></ion-searchbar>
+  </ion-toolbar>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col style="border: 1px solid rgb(164, 164, 164);height: 230px;" [routerLink]="['/product', product.id_product]" *ngFor="let product of searchedProduct" size="6">
+        <p style="text-align: justify;">{{product.name}}</p>
+        <p style="color: red;">$ {{product.price}}</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

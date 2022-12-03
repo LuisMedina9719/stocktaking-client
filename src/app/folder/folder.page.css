@@ -26,3 +26,25 @@ ion-menu-button {
 #container a {
   text-decoration: none;
 }
+
+.categoryCard,
+.categoryCardContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.categoryCardContent{
+  background-color: rgb(238, 238, 238);
+}
+
+.categoryCard img{
+  pad: 1rem;
+}
+
+.categoryCardContent ion-button{
+  height: 1.5rem;
+  font-size: 0.8rem;
+}
